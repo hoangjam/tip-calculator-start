@@ -14,9 +14,9 @@ tip_amount_converted = 1 + (float(tip_amount) / 100)
 
 number_of_people = int(input("How many people are splitting the bill? "))
 
-total = float(bill_amount) * (tip_amount_converted)
+total = round(float(bill_amount) * (tip_amount_converted), 2)
 final_total = "{:.2f}".format(total)
-split = total / float(number_of_people)
+split = round(total / float(number_of_people), 2)
 final_split = "{:.2f}".format(split)
 
 print(f"The total bill is ${final_total} including tip")
